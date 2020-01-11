@@ -21,6 +21,10 @@
         <label for="">Body</label>
         <textarea name="body" id="" cols="30" rows="10">{{$blog->body}}</textarea>
     </div>
+    <div>
+        <label for="">Category</label>
+        <input name="body" id="" cols="30" rows="10" value="{{$blog->category}}">
+    </div>
     <button type="submit">Submit Blog</button>
 </form>
 

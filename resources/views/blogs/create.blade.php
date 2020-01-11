@@ -9,7 +9,11 @@
 </head>
 <body>
 <h1>Create Task</h1>
-
+@if($errors)
+    @foreach($errors as $err)
+        <li class="text-danger">{{$err}}</li>
+    @endforeach
+@endif
 <form action={{ action('BlogsController@store') }}  method="post">
     @csrf
     <div>
@@ -20,6 +24,10 @@
     <div>
         <label for="">Body</label>
         <textarea name="body" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div>
+        <label for="">Category</label>
+        <input name="category" id="" cols="30" rows="10">
     </div>
     <button type="submit">Submit Blog</button>
 </form>

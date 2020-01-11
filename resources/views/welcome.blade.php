@@ -61,6 +61,24 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .change-btns{
+            margin-top: 10px;
+
+            }
+            #edit{
+             display: inline-block;
+
+            }
+            .delete{
+                display: inline-block;
+                height: 32px;
+                width: 107px;
+            }
+            #del,#edt{
+                height: 32px;
+                width: 107px;
+                margin-right:20px;
+            }
         </style>
     </head>
     <body>
@@ -91,24 +109,33 @@
                                     <div class="col-md-8 col-sm-8">
                        <h1> {{$blog->title}}</h1>
                                         {{$blog->body}}
+
+                                        <div class="change-btns">
+                                            <div class="delete">
                                         <form method="post" action='/delete'>
                                             @csrf
                                             <input type="hidden" value="{{$blog->id}}" name="id"/>
-                                            <button type="submit">click to delete</button>
+                                            <button type="submit" id="del">click to delete</button>
                                         </form>
+                                            </div>
+                                            <div id="edit">
                                         <form method="post" action='/edit' >
                                             @csrf
                                             <input type="hidden" value="{{$blog->id}}" name="id"/>
-                                            <button type="submit">click to edit</button>
+                                            <button type="submit" id="edt">click to edit</button>
                                         </form>
-{{--
+                                            </div>
+                                        </div>
+
                                     </div>
+                                    <h6>Written on {{$blog->created_at}} by {{$blog->user->name}}</h6>
                                 </div>
 
+                                <hr>
                                 @endforeach
                             </div>
                             @else
-                                <p>no blogs found</p>
+                                <p>There are not blogs posted yet</p>
                             @endif
                 </div>
 
