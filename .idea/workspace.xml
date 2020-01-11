@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="412ea83a-a28e-44b6-b6de-cf0b18f82c67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_10_095340_add_user_id_to_blogs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_10_113906_add_category_to_blogs_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/401.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/403.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/419.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/429.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/500.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/503.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/illustrated-layout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/layout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/minimal.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/BackendServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/BlogRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/BlogRepositoryInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blogs/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blogs/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blogs/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blogs/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +153,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578556362555</updated>
-      <workItem from="1578556364665" duration="42724000" />
+      <workItem from="1578556364665" duration="44842000" />
     </task>
     <servers />
   </component>
@@ -179,6 +164,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="349" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578753083360">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="349" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1578753083360" />
     <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578565606785">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -199,10 +188,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1578561252780" />
-    <state x="346" y="223" key="NewPhpClassDialog" timestamp="1578646723334">
+    <state x="346" y="223" key="NewPhpClassDialog" timestamp="1578753724700">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="346" y="223" key="NewPhpClassDialog/0.0.1280.800@0.0.1280.800" timestamp="1578646723334" />
+    <state x="346" y="223" key="NewPhpClassDialog/0.0.1280.800@0.0.1280.800" timestamp="1578753724700" />
     <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1578584008843">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

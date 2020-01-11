@@ -4,13 +4,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Blog;
 use Illuminate\Support\Facades\Cache;
+use App\Repositories\BlogRepositoryInterface;
 
 class BlogsController extends Controller
+
 {
-    public function __construct()
+    protected $blog;
+    public function __construct(BlogRepositoryInterface $blog)
     {
+        $this->blog = $blog;
+
         $this->middleware('auth', ['except'=>'show']);
     }
+
 
     public function index()
     {
@@ -91,7 +97,7 @@ class BlogsController extends Controller
 
     public function destroy(Request $request)
     {
-//        var_dump($request->input('id'));
+       var_dump($request->input('id'));
         $blog=Blog::find($request->input('id'));
         $blog->delete();
         return view('welcome')->with('success','Blog deleted successfully');
