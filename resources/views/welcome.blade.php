@@ -82,6 +82,7 @@
         </style>
     </head>
     <body>
+    <h1>Welcome to the homepage</h1>
     <?php
     $blogs = App\Blog::all();
     ?>

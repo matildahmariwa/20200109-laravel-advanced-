@@ -8,7 +8,7 @@
     <title>Create</title>
 </head>
 <body>
-<h1>Create Task</h1>
+<h1>Create Here</h1>
 @if($errors)
     @foreach($errors as $err)
         <li class="text-danger">{{$err}}</li>
@@ -34,3 +34,5 @@
 
 </body>
 </html>
+
+
