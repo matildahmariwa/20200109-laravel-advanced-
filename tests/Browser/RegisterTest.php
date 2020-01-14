@@ -18,9 +18,9 @@ class RegisterTest extends DuskTestCase
                 ->type('name', 'jane')
                 ->type('email', 'admin@2020')
                 ->type('password', 'hey20')
-                ->type('confirm_password', 'hey20')
+                ->type('password', 'hey20')
                 ->click('button[type="submit"]')
-                ->assertSee("Dashboard");
+                ->assertSee("Register");
         });
     }
 }
