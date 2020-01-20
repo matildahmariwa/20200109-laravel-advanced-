@@ -1,6 +1,6 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+
 use App\User;
 use App\Blog;
 use Illuminate\Support\Str;

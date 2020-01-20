@@ -9,13 +9,7 @@
 </head>
 <body>
 <h1>Create Here</h1>
-@if($errors)
-    @foreach($errors as $err)
-        <li class="text-danger">{{$err}}</li>
-    @endforeach
-@endif
-<form action={{ action('BlogsController@store') }}  method="post">
-    @csrf
+<form   method="post">
     <div>
         <label for=""> title</label>
         <input type="text" name="title">

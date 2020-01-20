@@ -71,7 +71,9 @@
                 </div>
             </div>
         </nav>
-
+        <div id="root">
+            <homes-view></homes-view>
+        </div>
         <main class="py-4">
             @yield('content')
         </main>

@@ -14,8 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/s', function () {
+    return view('sss');
+});
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -30,3 +33,12 @@ Route::post('/delete', 'BlogsController@destroy');
 Route::post('/edit', 'BlogsController@edit')->name('edit');
 
 Route::post('/update', 'BlogsController@update');
+
+Route::bind('blogs', function ($id){
+
+    return App\Blog::where('id', $id)-­>first();
+
+});
+Route::get('/blog', 'BlogsController@index');
+
+Route::post('/add', 'BlogsController@store');

@@ -4,28 +4,26 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Blog;
 use Illuminate\Support\Facades\Cache;
-use App\Repositories\BlogRepositoryInterface;
+use App\Repositories\BlogRepository;
 
 class BlogsController extends Controller
 
 {
     protected $blog;
-    public function __construct(BlogRepositoryInterface $blog)
+
+    public function __construct(BlogRepository $blog)
     {
         $this->blog = $blog;
 
-        $this->middleware('auth', ['except'=>'show']);
+//        $this->middleware('auth', ['except'=>'show']);
     }
 
 
     public function index()
     {
-        $blogs = Cache::remember('blogs', 10, function() {
-
-            return Blog::all();
-
-        });
-        return view('welcome', compact('blogs'));
+        $blog=$this->blog->all();
+//
+        return response()->json($blog);
     }
 
 
@@ -60,10 +58,12 @@ class BlogsController extends Controller
             $blog->setTitleNameAttribute($request->input('title'));
             $blog->body = $request->input('body');
             $blog->category = $request->input('category');
-            $blog->user_id = auth()->user()->id;
+            $blog->user_id =1;
             $blog->save();
 
-            return redirect("/");
+            return response()->json($blog);
+
+
         }catch (\Exception $e) {
             return redirect()->back()->with('errors', 'There was an error trying to submit the post.Please try again');
         }
@@ -72,7 +72,7 @@ class BlogsController extends Controller
 
     public function show($id)
     {
-       //
+
     }
 
 
